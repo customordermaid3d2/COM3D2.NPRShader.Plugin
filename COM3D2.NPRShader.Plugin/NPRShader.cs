@@ -6,6 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using BepInEx;
 using BepInEx.Configuration;
+using COM3D2API;
 using GearMenu;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -66,7 +67,7 @@ namespace COM3D2.NPRShader.Plugin
 			this.envView.Update();
 		}
 
-		private void gearButtonPressed(GameObject goButton)
+		private void gearButtonPressed()
 		{
 			if (this.modeSelectView.SelectedMode == ConstantValues.EditMode.Maid)
 			{
@@ -224,10 +225,13 @@ namespace COM3D2.NPRShader.Plugin
 			}
 		}
 
+		private static bool isButtonAdd = false;
+
 		private void InitGearMenu()
 		{
-			this.gear = Buttons.Add("NPRShader", "NPRShader", ConstantValues.byteIconPng, new Action<GameObject>(this.gearButtonPressed));
-			Buttons.SetText(this.gear, "NPRShader");
+			SystemShortcutAPI.AddButton("NPRShader", new Action(this.gearButtonPressed), "NPRShader", ConstantValues.byteIconPng);
+			//this.gear = Buttons.Add("NPRShader", "NPRShader", ConstantValues.byteIconPng, new Action<GameObject>(this.gearButtonPressed));
+			//Buttons.SetText(this.gear, "NPRShader");
 		}
 
 		public static string GetPluginName()

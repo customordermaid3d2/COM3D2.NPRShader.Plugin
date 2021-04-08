@@ -40,6 +40,9 @@
     <Reference Include="BepInEx">
       <HintPath>..\..\_lib\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="COM3D2.API">
+      <HintPath>F:\COM3D2\BepInEx\plugins\COM3D2.API.dll</HintPath>
+    </Reference>
     <Reference Include="ExIni">
       <HintPath>F:\COM3D2\BepInEx\plugins\UnityInjectorLoader\ExIni.dll</HintPath>
     </Reference>

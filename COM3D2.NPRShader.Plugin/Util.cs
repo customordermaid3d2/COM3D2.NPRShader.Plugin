@@ -39,9 +39,14 @@ namespace COM3D2.NPRShader.Plugin
 					}
 					Util.ALLShaders.Add(assetBundle);
 				}
-				catch
+				catch(Exception e)
 				{
+					Debug.LogWarning("LoadALLShaders() : " + e.ToString());
 				}
+			}
+            if (Util.ALLShaders.Count==0)
+            {
+				Debug.LogWarning("ALLShaders.Count 0");
 			}
 		}
 

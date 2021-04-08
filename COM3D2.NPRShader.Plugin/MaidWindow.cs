@@ -28,14 +28,12 @@ namespace COM3D2.NPRShader.Plugin
 				this.maidListBox = new CustomComboBox(this.maidDic.Values.ToArray<string>());
 				this.maidListBox.FontSize = this.FontSize;
 				this.maidListBox.Text = "Maid";
-				this.maidListBox.SelectedIndex = 0;
-				CustomComboBox customComboBox = this.maidListBox;
-				customComboBox.SelectedIndexChanged = (EventHandler)Delegate.Combine(customComboBox.SelectedIndexChanged, new EventHandler(this.ChangeMaid));
+				this.maidListBox.SelectedIndex = 0;				// 오류 발생
+				this.maidListBox.SelectedIndexChanged = (EventHandler)Delegate.Combine(this.maidListBox.SelectedIndexChanged, new EventHandler(this.ChangeMaid));
 				this.ChildControls.Add(this.maidListBox);
 				this.reloadMaidsButton = new CustomButton();
 				this.reloadMaidsButton.Text = "再読込";
-				CustomButton customButton = this.reloadMaidsButton;
-				customButton.Click = (EventHandler)Delegate.Combine(customButton.Click, new EventHandler(delegate(object o, EventArgs e)
+				this.reloadMaidsButton.Click = (EventHandler)Delegate.Combine(this.reloadMaidsButton.Click, new EventHandler(delegate(object o, EventArgs e)
 				{
 					this.bUpdateRequest = true;
 				}));

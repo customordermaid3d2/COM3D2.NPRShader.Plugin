@@ -8,6 +8,7 @@ namespace COM3D2.NPRShader.Plugin
 {
 	internal class CustomComboBox : ControlBase
 	{
+
 		public CustomComboBox()
 		{
 			try
@@ -15,15 +16,17 @@ namespace COM3D2.NPRShader.Plugin
 				this._id = CustomComboBox.NewWindowID;
 				CustomComboBox.NewWindowID++;
 				CustomComboBox.allComboBoxes[this._id] = this;
-				this._items = new List<GUIContent>();
+				this._items = new List<string>();
+				//this._items = new List<GUIContent>();
 				this.Awake();
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(ex.ToString());
+				Debug.LogError("CustomComboBox() : " + ex.ToString());
 			}
 		}
 
+		/*
 		public CustomComboBox(List<GUIContent> items)
 		{
 			try
@@ -36,9 +39,10 @@ namespace COM3D2.NPRShader.Plugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(ex.ToString());
+				Debug.LogError("CustomComboBox()2 : " + ex.ToString());
 			}
 		}
+		*/
 
 		public CustomComboBox(string[] items)
 		{
@@ -47,14 +51,17 @@ namespace COM3D2.NPRShader.Plugin
 				this._id = CustomComboBox.NewWindowID;
 				CustomComboBox.NewWindowID++;
 				CustomComboBox.allComboBoxes[this._id] = this;
+				_items=new List<string>(items);
+				/*
 				List<string> source = new List<string>(items);
 				this._items = (from x in source
-				select new GUIContent(x)).ToList<GUIContent>();
+				select new GUIContent(x)).ToList();
+				*/
 				this.Awake();
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError("CustomComboBox()"+ex.ToString());
+				Debug.LogError("CustomComboBox()3 : "+ex.ToString());
 			}
 		}
 
@@ -104,7 +111,7 @@ namespace COM3D2.NPRShader.Plugin
 				this.comboBoxButton = null;
 				if (this._items != null && 0 <= this._selectedIndex && this._selectedIndex < this.Count)
 				{
-					this.comboBoxButton = this._items[this._selectedIndex];
+					this.comboBoxButton = new GUIContent(this._items[this._selectedIndex]);
 				}
 				else
 				{
@@ -128,8 +135,10 @@ namespace COM3D2.NPRShader.Plugin
 					GUIStyle guistyle = new GUIStyle("box");
 					Rect rect = new Rect(this.dropDownListRect.x, this.Top + base.ScreenPos.y + 36f, this.dropDownListRect.width, num2);
 					GUIUtil.MouseClickOnGUIRect(rect);
-					GUIContent[] array = new GUIContent[this._items.Count];
-					this._items.CopyTo(array);
+					//GUIContent[] array = new GUIContent[this._items.Count];
+					//this._items.CopyTo(array);
+					GUIContent[] array = (from x in _items
+										  select new GUIContent(x)).ToArray();
 					GlobalComboBox.Set(rect, array, this.FontSize, new Action<int>(this.pick));
 				}
 			}
@@ -152,8 +161,10 @@ namespace COM3D2.NPRShader.Plugin
 		{
 			try
 			{
+				this._items = itemList;
+				/*
 				this._items = (from x in itemList
-				select new GUIContent(x)).ToList<GUIContent>();
+				select new GUIContent(x)).ToList<GUIContent>();*/
 			}
 			catch (Exception ex)
 			{
@@ -176,8 +187,10 @@ namespace COM3D2.NPRShader.Plugin
 			{
 				float num = this.comboListStyle.CalcHeight(this.comboBoxButton, 1f) * (float)this._items.Count;
 				Rect position = new Rect(base.ScreenPos.x, base.ScreenPos.y, this.dropDownListRect.width, this.dropDownListRect.height);
-				GUIContent[] array = new GUIContent[this._items.Count];
-				this._items.CopyTo(array);
+				//GUIContent[] array = new GUIContent[this._items.Count];
+				//this._items.CopyTo(array);
+				GUIContent[] array =(from x in _items
+				 select new GUIContent(x)).ToArray();
 				int num2 = GUI.SelectionGrid(position, this._selectedIndex, array, 1, this.comboListStyle);
 				if (num2 != this._selectedIndex)
 				{
@@ -282,6 +295,7 @@ namespace COM3D2.NPRShader.Plugin
 			}
 		}
 
+		/*
 		public List<GUIContent> Items
 		{
 			get
@@ -293,6 +307,7 @@ namespace COM3D2.NPRShader.Plugin
 				this._items = value;
 			}
 		}
+		*/
 
 		public int SelectedIndex
 		{
@@ -329,13 +344,13 @@ namespace COM3D2.NPRShader.Plugin
 				string result = string.Empty;
 				if (0 <= this._selectedIndex && this._selectedIndex < this._items.Count)
 				{
-					result = this._items[this._selectedIndex].text;
+					result = this._items[this._selectedIndex];
 				}
 				return result;
 			}
 			set
 			{
-				int num = this._items.FindIndex((GUIContent item) => item.text == value);
+				int num = this._items.FindIndex((string item) => item == value);
 				if (0 <= num)
 				{
 					this.SelectedIndex = num;
@@ -374,7 +389,8 @@ namespace COM3D2.NPRShader.Plugin
 
 		private int _id = 32;
 
-		private List<GUIContent> _items;
+		//private List<GUIContent> _items;
+		private List<string> _items;
 
 		private int _selectedIndex = -1;
 
