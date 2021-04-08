@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CF9B8CB-4481-4985-ACBE-539918C886FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>COM3D2.NPRShader.Plugin</RootNamespace>
+    <AssemblyName>COM3D2.NPRShader.Plugin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="ExIni">
+      <HintPath>F:\COM3D2\BepInEx\plugins\UnityInjectorLoader\ExIni.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityInjector">
+      <HintPath>..\..\..\COM3D2_Plugin\cm3d2_j_154\Sybaris\UnityInjector.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-PrivateImplementationDetails-.cs" />
+    <Compile Include="AssetLoader.cs" />
+    <Compile Include="BasePane.cs" />
+    <Compile Include="ColorChangeInfo.cs" />
+    <Compile Include="ColorPickerType.cs" />
+    <Compile Include="ConstantValues.cs" />
+    <Compile Include="ControlBase.cs" />
+    <Compile Include="CubemapGenerate.cs" />
+    <Compile Include="CustomButton.cs" />
+    <Compile Include="CustomColorPicker.cs" />
+    <Compile Include="CustomComboBox.cs" />
+    <Compile Include="CustomCubemapPicker.cs" />
+    <Compile Include="CustomImage.cs" />
+    <Compile Include="CustomLabel.cs" />
+    <Compile Include="CustomSlider.cs" />
+    <Compile Include="CustomTextField.cs" />
+    <Compile Include="CustomTextureButton.cs" />
+    <Compile Include="CustomToggleButton.cs" />
+    <Compile Include="EnvironmentWindow.cs" />
+    <Compile Include="GearMenu\Buttons.cs" />
+    <Compile Include="GearMenu\DefaultIcon.cs" />
+    <Compile Include="GlobalColorPicker.cs" />
+    <Compile Include="GlobalComboBox.cs" />
+    <Compile Include="GlobalCubemapPicker.cs" />
+    <Compile Include="GUIColor.cs" />
+    <Compile Include="GUIUtil.cs" />
+    <Compile Include="ItemAnimationInfo.cs" />
+    <Compile Include="MaidInfo.cs" />
+    <Compile Include="MaidManager.cs" />
+    <Compile Include="MaidWindow.cs" />
+    <Compile Include="MaterialAnimatorInfo.cs" />
+    <Compile Include="MaterialChangeInfo.cs" />
+    <Compile Include="MaterialInfo.cs" />
+    <Compile Include="MaterialPane.cs" />
+    <Compile Include="MenuInfo.cs" />
+    <Compile Include="ModelInfo.cs" />
+    <Compile Include="ModelType.cs" />
+    <Compile Include="ModeSelectWindow.cs" />
+    <Compile Include="NPRShader.cs" />
+    <Compile Include="ObjectPane.cs" />
+    <Compile Include="ObjectWindow.cs" />
+    <Compile Include="PBRModelInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReflectionProbeController.cs" />
+    <Compile Include="ReflectionProbeObj.cs" />
+    <Compile Include="ScrollablePane.cs" />
+    <Compile Include="TextureChangeInfo.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
