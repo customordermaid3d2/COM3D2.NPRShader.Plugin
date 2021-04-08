@@ -91,35 +91,36 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<IsRGBA>k__BackingField;
+				return this.isRGBA;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<IsRGBA>k__BackingField = value;
+				this.isRGBA = value;
 			}
 		}
-
+		/*
 		[CompilerGenerated]
 		private void <OnGUI>b__1_0(Color32 x, MaidParts.PartsColor y)
 		{
 			this.Value = x;
 			this.ColorChanged(this, new EventArgs());
 		}
-
+		*/
 		private Color _value;
 
 		private Color _valuebackup;
 
 		[CompilerGenerated]
-		private bool <IsRGBA>k__BackingField;
+		private bool isRGBA;
 
 		private Texture2D _colorTex;
 
-		public EventHandler ColorChanged = delegate(object <p0>, EventArgs <p1>)
+		public EventHandler ColorChanged;/*= delegate(object <p0>, EventArgs <p1>)
 		{
 		};
-
+		*/
+		/*
 		[CompilerGenerated]
 		[Serializable]
 		private sealed class <>c
@@ -141,5 +142,6 @@ namespace COM3D2.NPRShader.Plugin
 
 			public static EventHandler <>9__0_0;
 		}
+		*/
 	}
 }

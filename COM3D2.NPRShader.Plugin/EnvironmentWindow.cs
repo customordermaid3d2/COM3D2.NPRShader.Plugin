@@ -83,7 +83,7 @@ namespace COM3D2.NPRShader.Plugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(ex.ToString());
+				Debug.LogError("EnvironmentWindow.Awake(): " + ex.ToString());
 			}
 		}
 
@@ -446,7 +446,7 @@ namespace COM3D2.NPRShader.Plugin
 		static EnvironmentWindow()
 		{
 		}
-
+		/*
 		[CompilerGenerated]
 		private void <Awake>b__1_0(object o, EventArgs e)
 		{
@@ -455,7 +455,7 @@ namespace COM3D2.NPRShader.Plugin
 			this.bUpdateCubeMapRequest = false;
 			this.probe.RenderProbe();
 		}
-
+		*/
 		public Material skybox;
 
 		public Material skyboxBackup;

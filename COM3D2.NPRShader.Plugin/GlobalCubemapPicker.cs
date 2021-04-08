@@ -48,12 +48,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<rect>k__BackingField;
+					return this.Rect;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<rect>k__BackingField = value;
+					this.Rect = value;
 				}
 			}
 
@@ -62,12 +62,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<fWidth>k__BackingField;
+					return this.FWidth;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<fWidth>k__BackingField = value;
+					this.FWidth = value;
 				}
 			}
 
@@ -76,12 +76,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<fMargin>k__BackingField;
+					return this.FMargin;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<fMargin>k__BackingField = value;
+					this.FMargin = value;
 				}
 			}
 
@@ -90,12 +90,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<fRightPos>k__BackingField;
+					return this.FRightPos;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<fRightPos>k__BackingField = value;
+					this.FRightPos = value;
 				}
 			}
 
@@ -104,12 +104,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<fUpPos>k__BackingField;
+					return this.FUpPos;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<fUpPos>k__BackingField = value;
+					this.FUpPos = value;
 				}
 			}
 
@@ -132,12 +132,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<show>k__BackingField;
+					return this.Show;
 				}
 				[CompilerGenerated]
 				private set
 				{
-					this.<show>k__BackingField = value;
+					this.Show = value;
 				}
 			}
 
@@ -160,12 +160,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<gsLabel>k__BackingField;
+					return this.GsLabel;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<gsLabel>k__BackingField = value;
+					this.GsLabel = value;
 				}
 			}
 
@@ -174,12 +174,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<gsButton>k__BackingField;
+					return this.GsButton;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<gsButton>k__BackingField = value;
+					this.GsButton = value;
 				}
 			}
 
@@ -188,12 +188,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<scrollPosition>k__BackingField;
+					return this.ScrollPosition;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<scrollPosition>k__BackingField = value;
+					this.ScrollPosition = value;
 				}
 			}
 
@@ -349,37 +349,37 @@ namespace COM3D2.NPRShader.Plugin
 			public readonly int WINDOW_ID;
 
 			[CompilerGenerated]
-			private Rect <rect>k__BackingField;
+			private Rect Rect;
 
 			[CompilerGenerated]
-			private float <fWidth>k__BackingField;
+			private float FWidth;
 
 			[CompilerGenerated]
-			private float <fMargin>k__BackingField;
+			private float FMargin;
 
 			[CompilerGenerated]
-			private float <fRightPos>k__BackingField;
+			private float FRightPos;
 
 			[CompilerGenerated]
-			private float <fUpPos>k__BackingField;
+			private float FUpPos;
 
 			[CompilerGenerated]
 			private float GuiScrollHeight;
 
 			[CompilerGenerated]
-			private bool <show>k__BackingField;
+			private bool Show;
 
 			[CompilerGenerated]
 			private Action<Cubemap, string> Func;
 
 			[CompilerGenerated]
-			private GUIStyle <gsLabel>k__BackingField;
+			private GUIStyle GsLabel;
 
 			[CompilerGenerated]
-			private GUIStyle <gsButton>k__BackingField;
+			private GUIStyle GsButton;
 
 			[CompilerGenerated]
-			private Vector2 <scrollPosition>k__BackingField;
+			private Vector2 ScrollPosition;
 
 			private bool firstSet;
 
@@ -399,7 +399,7 @@ namespace COM3D2.NPRShader.Plugin
 
 				public Cubemap tex;
 			}
-
+			/*
 			[CompilerGenerated]
 			[Serializable]
 			private sealed class <>c
@@ -421,7 +421,7 @@ namespace COM3D2.NPRShader.Plugin
 				public static readonly GlobalCubemapPicker.TexturePickerWindow.<>c <>9 = new GlobalCubemapPicker.TexturePickerWindow.<>c();
 
 				public static Func<FileInfo, string> <>9__51_0;
-			}
+			}*/
 		}
 	}
 }

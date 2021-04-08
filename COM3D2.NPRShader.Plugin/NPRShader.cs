@@ -4,23 +4,30 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using BepInEx;
+using BepInEx.Configuration;
 using GearMenu;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
-using UnityInjector;
-using UnityInjector.Attributes;
+//using UnityInjector;
+//using UnityInjector.Attributes;
 
 namespace COM3D2.NPRShader.Plugin
 {
-	[PluginFilter("COM3D2x64")]
-	[PluginFilter("COM3D2OHx64")]
-	[PluginName("COM3D2.NPRShader.Plugin")]
-	[PluginVersion("0.9.2.2")]
-	public class NPRShader : PluginBase
+	[BepInProcess("COM3D2x64")]
+	[BepInProcess("COM3D2OHx64")]
+	[BepInPlugin("COM3D2.NPRShader.Plugin", "NPRShader by Lilly", "0.9.2.2")]
+	//[PluginName("COM3D2.NPRShader.Plugin")]
+	//[PluginVersion("0.9.2.2")]
+	public class NPRShader : BaseUnityPlugin
 	{
+
+		public static NPRShader nPRShader;
+
 		public void Awake()
 		{
+			nPRShader = this;
 			try
 			{
 				UnityEngine.Object.DontDestroyOnLoad(this);
@@ -204,11 +211,11 @@ namespace COM3D2.NPRShader.Plugin
 				this.maidView = new MaidWindow(fontSize);
 				this.objView = new ObjectWindow(fontSize);
 				this.envView = new EnvironmentWindow(fontSize);
-				this.objView.configObjectMaterialsAutoUpdate = this.configObjectMaterialsAutoUpdate;
+				this.objView.configObjectMaterialsAutoUpdate = this.configObjectMaterialsAutoUpdate.Value;
 				this.objView.init();
-				this.envView.configEnvMapResolution = this.configEnvMapResolution;
-				this.envView.configEnvMapAutoUpdate = this.configEnvMapAutoUpdate;
-				this.envView.configReflectionProbeAutoUpdate = this.configReflectionProbeAutoUpdate;
+				this.envView.configEnvMapResolution = this.configEnvMapResolution.Value;
+				this.envView.configEnvMapAutoUpdate = this.configEnvMapAutoUpdate.Value;
+				this.envView.configReflectionProbeAutoUpdate = this.configReflectionProbeAutoUpdate.Value;
 				this.envView.init();
 			}
 			catch (Exception ex)
@@ -228,7 +235,7 @@ namespace COM3D2.NPRShader.Plugin
 			string result = string.Empty;
 			try
 			{
-				PluginNameAttribute pluginNameAttribute = Attribute.GetCustomAttribute(typeof(NPRShader), typeof(PluginNameAttribute)) as PluginNameAttribute;
+				BepInPlugin pluginNameAttribute = Attribute.GetCustomAttribute(typeof(NPRShader), typeof(BepInPlugin)) as BepInPlugin;
 				if (pluginNameAttribute != null)
 				{
 					result = pluginNameAttribute.Name;
@@ -246,10 +253,10 @@ namespace COM3D2.NPRShader.Plugin
 			string result = string.Empty;
 			try
 			{
-				PluginVersionAttribute pluginVersionAttribute = Attribute.GetCustomAttribute(typeof(NPRShader), typeof(PluginVersionAttribute)) as PluginVersionAttribute;
+				BepInPlugin pluginVersionAttribute = Attribute.GetCustomAttribute(typeof(NPRShader), typeof(BepInPlugin)) as BepInPlugin;
 				if (pluginVersionAttribute != null)
 				{
-					result = pluginVersionAttribute.Version;
+					result = pluginVersionAttribute.Version.ToString();
 				}
 			}
 			catch (Exception ex)
@@ -261,12 +268,12 @@ namespace COM3D2.NPRShader.Plugin
 
 		private void ReadPluginPreferences()
 		{
-			this.configEnvMapResolution = this.GetPreferences("Config", "EnvironmentMapResolution", "VeryLow");
-			this.configReflectionProbeAutoUpdate = this.GetPreferences("Config", "ReflectionProbeAutoUpdate", true);
-			this.configEnvMapAutoUpdate = this.GetPreferences("Config", "EnvironmentMapAutoUpdate", false);
-			this.configObjectMaterialsAutoUpdate = this.GetPreferences("Config", "ObjectMaterialsAutoUpdate", false);
+			this.configEnvMapResolution = Config.Bind("Config", "EnvironmentMapResolution", "VeryLow");
+			this.configReflectionProbeAutoUpdate = Config.Bind("Config", "ReflectionProbeAutoUpdate", true);
+			this.configEnvMapAutoUpdate = Config.Bind("Config", "EnvironmentMapAutoUpdate", false);
+			this.configObjectMaterialsAutoUpdate = Config.Bind("Config", "ObjectMaterialsAutoUpdate", false);
 		}
-
+		/*
 		private string GetPreferences(string section, string key, string defaultValue)
 		{
 			if (!base.Preferences.HasSection(section) || !base.Preferences[section].HasKey(key) || string.IsNullOrEmpty(base.Preferences[section][key].Value))
@@ -312,7 +319,7 @@ namespace COM3D2.NPRShader.Plugin
 			float.TryParse(base.Preferences[section][key].Value, out result);
 			return result;
 		}
-
+		*/
 		public static bool IsValid(Maid m)
 		{
 			return m != null && m.body0 != null && m.Visible;
@@ -658,13 +665,13 @@ namespace COM3D2.NPRShader.Plugin
 
 		private bool configUseKeyboad = true;
 
-		public string configEnvMapResolution = string.Empty;
+		public ConfigEntry<string> configEnvMapResolution ;
 
-		public bool configEnvMapAutoUpdate;
+		public ConfigEntry<bool> configEnvMapAutoUpdate;
 
-		public bool configReflectionProbeAutoUpdate;
+		public ConfigEntry<bool> configReflectionProbeAutoUpdate;
 
-		public bool configObjectMaterialsAutoUpdate;
+		public ConfigEntry<bool> configObjectMaterialsAutoUpdate;
 
 		private ModeSelectWindow modeSelectView;
 

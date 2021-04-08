@@ -18,12 +18,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<catName>k__BackingField;
+				return this.CatName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<catName>k__BackingField = value;
+				this.CatName = value;
 			}
 		}
 
@@ -32,12 +32,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<slotName>k__BackingField;
+				return this.SlotName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<slotName>k__BackingField = value;
+				this.SlotName = value;
 			}
 		}
 
@@ -46,12 +46,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<materialNo>k__BackingField;
+				return this.MaterialNo;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<materialNo>k__BackingField = value;
+				this.MaterialNo = value;
 			}
 		}
 
@@ -60,25 +60,25 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<filename>k__BackingField;
+				return this.Filename;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<filename>k__BackingField = value;
+				this.Filename = value;
 			}
 		}
 
 		[CompilerGenerated]
-		private string <catName>k__BackingField;
+		private string CatName;
 
 		[CompilerGenerated]
-		private string <slotName>k__BackingField;
+		private string SlotName;
 
 		[CompilerGenerated]
-		private int <materialNo>k__BackingField;
+		private int MaterialNo;
 
 		[CompilerGenerated]
-		private string <filename>k__BackingField;
+		private string Filename;
 	}
 }

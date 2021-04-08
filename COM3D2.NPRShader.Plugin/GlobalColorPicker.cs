@@ -45,12 +45,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<rect>k__BackingField;
+					return this.Rect;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<rect>k__BackingField = value;
+					this.Rect = value;
 				}
 			}
 
@@ -59,12 +59,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<fMargin>k__BackingField;
+					return this.FMargin;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<fMargin>k__BackingField = value;
+					this.FMargin = value;
 				}
 			}
 
@@ -73,12 +73,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<fRightPos>k__BackingField;
+					return this.FRightPos;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<fRightPos>k__BackingField = value;
+					this.FRightPos = value;
 				}
 			}
 
@@ -87,12 +87,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<fUpPos>k__BackingField;
+					return this.FUpPos;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<fUpPos>k__BackingField = value;
+					this.FUpPos = value;
 				}
 			}
 
@@ -101,12 +101,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<show>k__BackingField;
+					return this.Show;
 				}
 				[CompilerGenerated]
 				private set
 				{
-					this.<show>k__BackingField = value;
+					this.Show = value;
 				}
 			}
 
@@ -129,12 +129,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<gsLabel>k__BackingField;
+					return this.GsLabel;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<gsLabel>k__BackingField = value;
+					this.GsLabel = value;
 				}
 			}
 
@@ -143,12 +143,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<gsButton>k__BackingField;
+					return this.GsButton;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<gsButton>k__BackingField = value;
+					this.GsButton = value;
 				}
 			}
 
@@ -157,12 +157,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<texture>k__BackingField;
+					return this.Texture;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<texture>k__BackingField = value;
+					this.Texture = value;
 				}
 			}
 
@@ -171,12 +171,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<r>k__BackingField;
+					return this.R;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<r>k__BackingField = value;
+					this.R = value;
 				}
 			}
 
@@ -185,12 +185,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<g>k__BackingField;
+					return this.G;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<g>k__BackingField = value;
+					this.G = value;
 				}
 			}
 
@@ -199,12 +199,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<b>k__BackingField;
+					return this.B;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<b>k__BackingField = value;
+					this.B = value;
 				}
 			}
 
@@ -213,12 +213,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<a>k__BackingField;
+					return this.A;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<a>k__BackingField = value;
+					this.A = value;
 				}
 			}
 
@@ -227,12 +227,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<type>k__BackingField;
+					return this.Type;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<type>k__BackingField = value;
+					this.Type = value;
 				}
 			}
 
@@ -349,48 +349,48 @@ namespace COM3D2.NPRShader.Plugin
 			public readonly int WINDOW_ID;
 
 			[CompilerGenerated]
-			private Rect <rect>k__BackingField;
+			private Rect Rect;
 
 			[CompilerGenerated]
-			private float <fMargin>k__BackingField;
+			private float FMargin;
 
 			[CompilerGenerated]
-			private float <fRightPos>k__BackingField;
+			private float FRightPos;
 
 			[CompilerGenerated]
-			private float <fUpPos>k__BackingField;
+			private float FUpPos;
 
 			[CompilerGenerated]
-			private bool <show>k__BackingField;
+			private bool Show;
 
 			[CompilerGenerated]
 			private Action<Color32, MaidParts.PartsColor> Func;
 
 			[CompilerGenerated]
-			private GUIStyle <gsLabel>k__BackingField;
+			private GUIStyle GsLabel;
 
 			[CompilerGenerated]
-			private GUIStyle <gsButton>k__BackingField;
+			private GUIStyle GsButton;
 
 			[CompilerGenerated]
-			private Texture2D <texture>k__BackingField;
+			private Texture2D Texture;
 
 			[CompilerGenerated]
-			private byte <r>k__BackingField;
+			private byte R;
 
 			[CompilerGenerated]
-			private byte <g>k__BackingField;
+			private byte G;
 
 			[CompilerGenerated]
-			private byte <b>k__BackingField;
+			private byte B;
 
 			[CompilerGenerated]
-			private byte <a>k__BackingField;
+			private byte A;
 
 			private MaidParts.PartsColor partsColor;
 
 			[CompilerGenerated]
-			private ColorPickerType <type>k__BackingField;
+			private ColorPickerType Type;
 		}
 	}
 }

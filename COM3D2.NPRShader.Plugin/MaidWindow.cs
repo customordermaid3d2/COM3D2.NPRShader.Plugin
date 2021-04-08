@@ -47,7 +47,7 @@ namespace COM3D2.NPRShader.Plugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(ex.ToString());
+				Debug.LogError("MaidWindow.Awake() : " + ex.ToString());
 			}
 		}
 
@@ -239,13 +239,13 @@ namespace COM3D2.NPRShader.Plugin
 				}
 			}
 		}
-
+		/*
 		[CompilerGenerated]
 		private void <Awake>b__1_0(object o, EventArgs e)
 		{
 			this.bUpdateRequest = true;
 		}
-
+		*/
 		public Dictionary<string, string> maidDic;
 
 		public bool bUpdateRequest = true;

@@ -91,13 +91,13 @@ namespace COM3D2.NPRShader.Plugin
 				this.enableCheckbox.Value = value;
 			}
 		}
-
+		/*
 		[CompilerGenerated]
 		private void <Awake>b__3_0(object o, EventArgs e)
 		{
 			this.Reset();
 		}
-
+		*/
 		private CustomToggleButton enableCheckbox;
 
 		private CustomButton resetButton;

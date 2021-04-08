@@ -371,6 +371,7 @@ namespace COM3D2.NPRShader.Plugin
 
 		public const int Margin = 5;
 
+		/*
 		[CompilerGenerated]
 		[Serializable]
 		private sealed class <>c
@@ -407,5 +408,6 @@ namespace COM3D2.NPRShader.Plugin
 
 			public static Func<ControlBase, float> <>9__27_0;
 		}
+		*/
 	}
 }

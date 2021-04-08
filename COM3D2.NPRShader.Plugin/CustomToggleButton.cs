@@ -177,7 +177,7 @@ namespace COM3D2.NPRShader.Plugin
 
 		private CustomToggleButton pair;
 
-		public EventHandler CheckedChanged = delegate(object <p0>, EventArgs <p1>)
+		public EventHandler CheckedChanged;/*= delegate(object <p0>, EventArgs <p1>)
 		{
 		};
 
@@ -207,6 +207,6 @@ namespace COM3D2.NPRShader.Plugin
 			public static EventHandler <>9__0_0;
 
 			public static EventHandler <>9__1_0;
-		}
+		}*/
 	}
 }

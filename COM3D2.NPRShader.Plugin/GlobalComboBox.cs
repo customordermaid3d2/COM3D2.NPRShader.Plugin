@@ -45,12 +45,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<rect>k__BackingField;
+					return this.Rect;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<rect>k__BackingField = value;
+					this.Rect = value;
 				}
 			}
 
@@ -59,12 +59,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<rectItem>k__BackingField;
+					return this.RectItem;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<rectItem>k__BackingField = value;
+					this.RectItem = value;
 				}
 			}
 
@@ -73,12 +73,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<show>k__BackingField;
+					return this.Show;
 				}
 				[CompilerGenerated]
 				private set
 				{
-					this.<show>k__BackingField = value;
+					this.Show = value;
 				}
 			}
 
@@ -87,12 +87,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<sItems>k__BackingField;
+					return this.SItems;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<sItems>k__BackingField = value;
+					this.SItems = value;
 				}
 			}
 
@@ -101,12 +101,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<gsSelectionGrid>k__BackingField;
+					return this.GsSelectionGrid;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<gsSelectionGrid>k__BackingField = value;
+					this.GsSelectionGrid = value;
 				}
 			}
 
@@ -115,12 +115,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<gssBlack>k__BackingField;
+					return this.GssBlack;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<gssBlack>k__BackingField = value;
+					this.GssBlack = value;
 				}
 			}
 
@@ -129,12 +129,12 @@ namespace COM3D2.NPRShader.Plugin
 				[CompilerGenerated]
 				get
 				{
-					return this.<gssWhite>k__BackingField;
+					return this.GssWhite;
 				}
 				[CompilerGenerated]
 				set
 				{
-					this.<gssWhite>k__BackingField = value;
+					this.GssWhite = value;
 				}
 			}
 
@@ -238,25 +238,25 @@ namespace COM3D2.NPRShader.Plugin
 			public readonly int WINDOW_ID;
 
 			[CompilerGenerated]
-			private Rect <rect>k__BackingField;
+			private Rect Rect;
 
 			[CompilerGenerated]
-			private Rect <rectItem>k__BackingField;
+			private Rect RectItem;
 
 			[CompilerGenerated]
-			private bool <show>k__BackingField;
+			private bool Show;
 
 			[CompilerGenerated]
-			private GUIContent[] <sItems>k__BackingField;
+			private GUIContent[] SItems;
 
 			[CompilerGenerated]
-			private GUIStyle <gsSelectionGrid>k__BackingField;
+			private GUIStyle GsSelectionGrid;
 
 			[CompilerGenerated]
-			private GUIStyleState <gssBlack>k__BackingField;
+			private GUIStyleState GssBlack;
 
 			[CompilerGenerated]
-			private GUIStyleState <gssWhite>k__BackingField;
+			private GUIStyleState GssWhite;
 
 			[CompilerGenerated]
 			private Action<int> Func;

@@ -18,12 +18,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<menuFileName>k__BackingField;
+				return this.MenuFileName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<menuFileName>k__BackingField = value;
+				this.MenuFileName = value;
 			}
 		}
 
@@ -32,12 +32,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<menuName>k__BackingField;
+				return this.MenuName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<menuName>k__BackingField = value;
+				this.MenuName = value;
 			}
 		}
 
@@ -46,12 +46,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<modelName>k__BackingField;
+				return this.ModelName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<modelName>k__BackingField = value;
+				this.ModelName = value;
 			}
 		}
 
@@ -60,12 +60,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<partCategory>k__BackingField;
+				return this.PartCategory;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<partCategory>k__BackingField = value;
+				this.PartCategory = value;
 			}
 		}
 
@@ -74,29 +74,29 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<slotName>k__BackingField;
+				return this.SlotName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<slotName>k__BackingField = value;
+				this.SlotName = value;
 			}
 		}
 
 		[CompilerGenerated]
-		private string <menuFileName>k__BackingField;
+		private string MenuFileName;
 
 		[CompilerGenerated]
-		private string <menuName>k__BackingField;
+		private string MenuName;
 
 		[CompilerGenerated]
-		private string <modelName>k__BackingField;
+		private string ModelName;
 
 		[CompilerGenerated]
-		private MPN <partCategory>k__BackingField;
+		private MPN PartCategory;
 
 		[CompilerGenerated]
-		private string <slotName>k__BackingField;
+		private string SlotName;
 
 		public List<ModelInfo> models;
 

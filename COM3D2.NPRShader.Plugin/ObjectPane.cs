@@ -822,12 +822,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<wasChanged>k__BackingField;
+				return this.WasChanged;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<wasChanged>k__BackingField = value;
+				this.WasChanged = value;
 			}
 		}
 
@@ -836,12 +836,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<bLoadMateFileRequested>k__BackingField;
+				return this.BLoadMateFileRequested;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<bLoadMateFileRequested>k__BackingField = value;
+				this.BLoadMateFileRequested = value;
 			}
 		}
 
@@ -850,12 +850,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<bResetMaterial>k__BackingField;
+				return this.BResetMaterial;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<bResetMaterial>k__BackingField = value;
+				this.BResetMaterial = value;
 			}
 		}
 
@@ -875,7 +875,7 @@ namespace COM3D2.NPRShader.Plugin
 		static ObjectPane()
 		{
 		}
-
+		/*
 		[CompilerGenerated]
 		private void <SetupPane>b__1_0(object o, EventArgs e)
 		{
@@ -916,19 +916,20 @@ namespace COM3D2.NPRShader.Plugin
 			}
 			this.bLoadMateFileRequested = true;
 		}
-
+		*/
+		/*
 		[CompilerGenerated]
 		private void <ShowPane>b__2_1(object o, EventArgs e)
 		{
 			this.Material.renderQueue = (int)this.RenderQueueSlider.Value;
 			this.setMaterial();
 		}
-
+		*/
 		private bool _value;
 
-		public EventHandler CheckedChanged = delegate(object <p0>, EventArgs <p1>)
+		public EventHandler CheckedChanged;/* = delegate(object <p0>, EventArgs <p1>)
 		{
-		};
+		};*/
 
 		private static readonly string[] CULLMODE = new string[]
 		{
@@ -1070,13 +1071,13 @@ namespace COM3D2.NPRShader.Plugin
 		public bool deleteRequested;
 
 		[CompilerGenerated]
-		private bool <wasChanged>k__BackingField;
+		private bool WasChanged;
 
 		[CompilerGenerated]
-		private bool <bLoadMateFileRequested>k__BackingField;
+		private bool BLoadMateFileRequested;
 
 		[CompilerGenerated]
-		private bool <bResetMaterial>k__BackingField;
+		private bool BResetMaterial;
 
 		private int renderQueue;
 
@@ -1140,7 +1141,7 @@ namespace COM3D2.NPRShader.Plugin
 			Toggle,
 			List
 		}
-
+		/*
 		[CompilerGenerated]
 		[Serializable]
 		private sealed class <>c
@@ -1296,6 +1297,6 @@ namespace COM3D2.NPRShader.Plugin
 			public CustomToggleButton shaderToggleButton;
 
 			public ObjectPane <>4__this;
-		}
+		}*/
 	}
 }

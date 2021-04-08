@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using BepInEx;
 using I2.Loc;
 using UnityEngine;
-using UnityInjector;
-using UnityInjector.Attributes;
+//using UnityInjector;
+//using UnityInjector.Attributes;
 
 namespace GearMenu
 {
@@ -28,17 +29,17 @@ namespace GearMenu
 			}
 		}
 
-		public static GameObject Add(PluginBase plugin, byte[] pngData, Action<GameObject> action)
+		public static GameObject Add(BepInPlugin plugin, byte[] pngData, Action<GameObject> action)
 		{
 			return Buttons.Add(null, plugin, pngData, action);
 		}
 
-		public static GameObject Add(string name, PluginBase plugin, byte[] pngData, Action<GameObject> action)
+		public static GameObject Add(string name, BepInPlugin plugin, byte[] pngData, Action<GameObject> action)
 		{
-			PluginNameAttribute pluginNameAttribute = Attribute.GetCustomAttribute(plugin.GetType(), typeof(PluginNameAttribute)) as PluginNameAttribute;
-			PluginVersionAttribute pluginVersionAttribute = Attribute.GetCustomAttribute(plugin.GetType(), typeof(PluginVersionAttribute)) as PluginVersionAttribute;
+			BepInPlugin pluginNameAttribute = Attribute.GetCustomAttribute(plugin.GetType(), typeof(BepInPlugin)) as BepInPlugin;
+			BepInPlugin pluginVersionAttribute = Attribute.GetCustomAttribute(plugin.GetType(), typeof(BepInPlugin)) as BepInPlugin;
 			string arg = (pluginNameAttribute == null) ? plugin.Name : pluginNameAttribute.Name;
-			string arg2 = (pluginVersionAttribute == null) ? string.Empty : pluginVersionAttribute.Version;
+			string arg2 = (pluginVersionAttribute == null) ? string.Empty : pluginVersionAttribute.Version.ToString();
 			string label = string.Format("{0} {1}", arg, arg2);
 			return Buttons.Add(name, label, pngData, action);
 		}
@@ -422,7 +423,7 @@ namespace GearMenu
 				"Exit"
 			};
 		}
-
+		/*
 		[CompilerGenerated]
 		private sealed class <>c__DisplayClass9_0
 		{
@@ -498,6 +499,6 @@ namespace GearMenu
 			}
 
 			public string name;
-		}
+		}*/
 	}
 }

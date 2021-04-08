@@ -21,7 +21,7 @@ namespace COM3D2.NPRShader.Plugin
 			return new MenuInfo
 			{
 				modelType = ModelType.BGObject,
-				BGObjectId = id
+				bGObjectId = id
 			};
 		}
 
@@ -93,12 +93,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<modelType>k__BackingField;
+				return this.ModelType;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<modelType>k__BackingField = value;
+				this.ModelType = value;
 			}
 		}
 
@@ -107,12 +107,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<menuFileName>k__BackingField;
+				return this.MenuFileName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<menuFileName>k__BackingField = value;
+				this.MenuFileName = value;
 			}
 		}
 
@@ -121,40 +121,40 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<menuName>k__BackingField;
+				return this.MenuName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<menuName>k__BackingField = value;
+				this.MenuName = value;
 			}
 		}
-
+		/*
 		public string menuInfo
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.<menuInfo>k__BackingField;
+				return this.menuInfo;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<menuInfo>k__BackingField = value;
+				this.menuInfo = value;
 			}
 		}
-
+		*/
 		public string modelName
 		{
 			[CompilerGenerated]
 			get
 			{
-				return this.<modelName>k__BackingField;
+				return this.ModelName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<modelName>k__BackingField = value;
+				this.ModelName = value;
 			}
 		}
 
@@ -163,12 +163,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<objLayer>k__BackingField;
+				return this.ObjLayer;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<objLayer>k__BackingField = value;
+				this.ObjLayer = value;
 			}
 		}
 
@@ -177,12 +177,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<bundleName>k__BackingField;
+				return this.BundleName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<bundleName>k__BackingField = value;
+				this.BundleName = value;
 			}
 		}
 
@@ -191,12 +191,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<modelId>k__BackingField;
+				return this.ModelId;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<modelId>k__BackingField = value;
+				this.ModelId = value;
 			}
 		}
 
@@ -205,12 +205,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<myRoomObjectId>k__BackingField;
+				return this.MyRoomObjectId;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<myRoomObjectId>k__BackingField = value;
+				this.MyRoomObjectId = value;
 			}
 		}
 
@@ -219,12 +219,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<BGObjectId>k__BackingField;
+				return this.bGObjectId;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<BGObjectId>k__BackingField = value;
+				this.bGObjectId = value;
 			}
 		}
 
@@ -233,12 +233,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<delOnly>k__BackingField;
+				return this.DelOnly;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<delOnly>k__BackingField = value;
+				this.DelOnly = value;
 			}
 		}
 
@@ -247,12 +247,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<iconTextureName>k__BackingField;
+				return this.IconTextureName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<iconTextureName>k__BackingField = value;
+				this.IconTextureName = value;
 			}
 		}
 
@@ -261,12 +261,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<partCategory>k__BackingField;
+				return this.PartCategory;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<partCategory>k__BackingField = value;
+				this.PartCategory = value;
 			}
 		}
 
@@ -275,12 +275,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<partsColor>k__BackingField;
+				return this.PartsColor;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<partsColor>k__BackingField = value;
+				this.PartsColor = value;
 			}
 		}
 
@@ -289,56 +289,56 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<modFileName>k__BackingField;
+				return this.ModFileName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<modFileName>k__BackingField = value;
+				this.ModFileName = value;
 			}
 		}
 
 		[CompilerGenerated]
-		private ModelType <modelType>k__BackingField;
+		private ModelType ModelType;
 
 		[CompilerGenerated]
-		private string <menuFileName>k__BackingField;
+		private string MenuFileName;
 
 		[CompilerGenerated]
-		private string <menuName>k__BackingField;
+		private string MenuName;
 
 		[CompilerGenerated]
-		private string <menuInfo>k__BackingField;
+		private string menuInfo;
 
 		[CompilerGenerated]
-		private string <modelName>k__BackingField;
+		private string ModelName;
 
 		[CompilerGenerated]
-		private int <objLayer>k__BackingField;
+		private int ObjLayer;
 
 		[CompilerGenerated]
-		private string <bundleName>k__BackingField;
+		private string BundleName;
 
 		[CompilerGenerated]
-		private string <modelId>k__BackingField;
+		private string ModelId;
 
 		[CompilerGenerated]
-		private int <myRoomObjectId>k__BackingField;
+		private int MyRoomObjectId;
 
 		[CompilerGenerated]
-		private long <BGObjectId>k__BackingField;
+		private long bGObjectId;
 
 		[CompilerGenerated]
-		private bool <delOnly>k__BackingField;
+		private bool DelOnly;
 
 		[CompilerGenerated]
-		private string <iconTextureName>k__BackingField;
+		private string IconTextureName;
 
 		[CompilerGenerated]
-		private MPN <partCategory>k__BackingField;
+		private MPN PartCategory;
 
 		[CompilerGenerated]
-		private MaidParts.PARTS_COLOR <partsColor>k__BackingField;
+		private MaidParts.PARTS_COLOR PartsColor;
 
 		public List<ModelInfo> models;
 
@@ -351,6 +351,6 @@ namespace COM3D2.NPRShader.Plugin
 		public List<MaterialAnimatorInfo> materialAnimators;
 
 		[CompilerGenerated]
-		private string <modFileName>k__BackingField;
+		private string ModFileName;
 	}
 }

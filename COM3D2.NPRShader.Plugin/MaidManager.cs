@@ -11,12 +11,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<listMaid>k__BackingField;
+				return this.ListMaid;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<listMaid>k__BackingField = value;
+				this.ListMaid = value;
 			}
 		}
 
@@ -25,12 +25,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<listID>k__BackingField;
+				return this.ListID;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<listID>k__BackingField = value;
+				this.ListID = value;
 			}
 		}
 
@@ -39,12 +39,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<listName>k__BackingField;
+				return this.ListName;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<listName>k__BackingField = value;
+				this.ListName = value;
 			}
 		}
 
@@ -53,12 +53,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<iCurrent>k__BackingField;
+				return this.ICurrent;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<iCurrent>k__BackingField = value;
+				this.ICurrent = value;
 			}
 		}
 
@@ -67,12 +67,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<sCurrent>k__BackingField;
+				return this.SCurrent;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<sCurrent>k__BackingField = value;
+				this.SCurrent = value;
 			}
 		}
 
@@ -81,12 +81,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<uCurrent>k__BackingField;
+				return this.UCurrent;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<uCurrent>k__BackingField = value;
+				this.UCurrent = value;
 			}
 		}
 
@@ -95,12 +95,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<bUpdateRequest>k__BackingField;
+				return this.BUpdateRequest;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<bUpdateRequest>k__BackingField = value;
+				this.BUpdateRequest = value;
 			}
 		}
 
@@ -109,12 +109,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<bFade>k__BackingField;
+				return this.BFade;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<bFade>k__BackingField = value;
+				this.BFade = value;
 			}
 		}
 
@@ -123,12 +123,12 @@ namespace COM3D2.NPRShader.Plugin
 			[CompilerGenerated]
 			get
 			{
-				return this.<cm>k__BackingField;
+				return this.Cm;
 			}
 			[CompilerGenerated]
 			set
 			{
-				this.<cm>k__BackingField = value;
+				this.Cm = value;
 			}
 		}
 
@@ -249,30 +249,30 @@ namespace COM3D2.NPRShader.Plugin
 		}
 
 		[CompilerGenerated]
-		private List<Maid> <listMaid>k__BackingField;
+		private List<Maid> ListMaid;
 
 		[CompilerGenerated]
-		private List<string> <listID>k__BackingField;
+		private List<string> ListID;
 
 		[CompilerGenerated]
-		private List<string> <listName>k__BackingField;
+		private List<string> ListName;
 
 		[CompilerGenerated]
-		private int <iCurrent>k__BackingField;
+		private int ICurrent;
 
 		[CompilerGenerated]
-		private string <sCurrent>k__BackingField;
+		private string SCurrent;
 
 		[CompilerGenerated]
-		private string <uCurrent>k__BackingField;
+		private string UCurrent;
 
 		[CompilerGenerated]
-		private bool <bUpdateRequest>k__BackingField;
+		private bool BUpdateRequest;
 
 		[CompilerGenerated]
-		private bool <bFade>k__BackingField;
+		private bool BFade;
 
 		[CompilerGenerated]
-		private CharacterMgr <cm>k__BackingField;
+		private CharacterMgr Cm;
 	}
 }

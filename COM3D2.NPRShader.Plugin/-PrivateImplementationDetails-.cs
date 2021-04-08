@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-
+/*
 [CompilerGenerated]
 internal sealed class <PrivateImplementationDetails>
 {
@@ -19,3 +19,4 @@ internal sealed class <PrivateImplementationDetails>
 	{
 	}
 }
+*/

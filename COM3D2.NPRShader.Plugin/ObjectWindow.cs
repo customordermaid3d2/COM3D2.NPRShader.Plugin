@@ -280,7 +280,7 @@ namespace COM3D2.NPRShader.Plugin
 		{
 			this.AutoUpdateButton.Value = this.configObjectMaterialsAutoUpdate;
 		}
-
+		/*
 		[CompilerGenerated]
 		private void <Awake>b__1_0(object o, EventArgs e)
 		{
@@ -304,7 +304,7 @@ namespace COM3D2.NPRShader.Plugin
 			this.objDic[0] = "- - -";
 			this.UpdaateMaterial();
 		}
-
+		*/
 		public bool bUpdateRequest = true;
 
 		public bool reloadMaterialRequest;
@@ -326,7 +326,7 @@ namespace COM3D2.NPRShader.Plugin
 		private List<ObjectPane> objectPanes;
 
 		private Dictionary<string, MaterialInfo> materialSlotInfos;
-
+		/*
 		[CompilerGenerated]
 		[Serializable]
 		private sealed class <>c
@@ -349,5 +349,6 @@ namespace COM3D2.NPRShader.Plugin
 
 			public static Func<CustomToggleButton, string> <>9__3_0;
 		}
+		*/
 	}
 }

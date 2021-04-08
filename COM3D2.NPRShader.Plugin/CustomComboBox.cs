@@ -54,12 +54,19 @@ namespace COM3D2.NPRShader.Plugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(ex.ToString());
+				Debug.LogError("CustomComboBox()"+ex.ToString());
 			}
 		}
 
-		public override void Awake()
+		static bool isSetup=false;
+
+		public void Setup()
 		{
+            if (isSetup)
+            {
+				isSetup =true;
+				return;
+            }
 			try
 			{
 				this.comboButtonStyle = new GUIStyle("button");
@@ -77,12 +84,13 @@ namespace COM3D2.NPRShader.Plugin
 			}
 			catch (Exception ex)
 			{
-				Debug.LogError(ex.ToString());
+				Debug.LogError("CustomComboBox.Awake() : " + ex.ToString());
 			}
 		}
 
 		public override void OnGUI()
 		{
+			Setup();
 			try
 			{
 				if (this._isShowDropDownList && !GlobalComboBox.Visible)
@@ -392,10 +400,11 @@ namespace COM3D2.NPRShader.Plugin
 
 		private Vector2 scrollViewVector = Vector2.zero;
 
-		public EventHandler SelectedIndexChanged = delegate(object <p0>, EventArgs <p1>)
+		public EventHandler SelectedIndexChanged;/*= delegate(object <p0>, EventArgs <p1>)
 		{
 		};
-
+		*/
+		/*
 		[CompilerGenerated]
 		[Serializable]
 		private sealed class <>c
@@ -443,7 +452,8 @@ namespace COM3D2.NPRShader.Plugin
 
 			public static Func<string, GUIContent> <>9__6_0;
 		}
-
+		*/
+		/*
 		[CompilerGenerated]
 		private sealed class <>c__DisplayClass31_0
 		{
@@ -458,5 +468,6 @@ namespace COM3D2.NPRShader.Plugin
 
 			public string value;
 		}
+		*/
 	}
 }

@@ -20,9 +20,11 @@ namespace COM3D2.NPRShader.Plugin
 		{
 		}
 
-		public static readonly string BaseConfigDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\Config";
+		// \COM3D2_158\BepInEx\plugins\Config\NPRShader\Shaders
+		public static readonly string BaseConfigDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\..\\Config";
 
-		public static readonly string ConfigDir = ConstantValues.BaseConfigDir + "\\NPRShader";
+		public static readonly string ConfigDir = BaseConfigDir + "\\NPRShader";
+		//public static readonly string ConfigDir = ConstantValues.BaseConfigDir + "\\NPRShader";
 
 		public static readonly List<string> CubemapImageDir = new List<string>
 		{

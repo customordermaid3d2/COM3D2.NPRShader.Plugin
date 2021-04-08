@@ -76,7 +76,7 @@ namespace COM3D2.NPRShader.Plugin
 				this._filename = value;
 			}
 		}
-
+		/*
 		[CompilerGenerated]
 		private void <OnGUI>b__1_0(Cubemap x, string y)
 		{
@@ -84,17 +84,18 @@ namespace COM3D2.NPRShader.Plugin
 			this._filename = y;
 			this.TextureChanged(this, new EventArgs());
 		}
-
+		*/
 		private Cubemap _value;
 
 		private string _filename;
 
 		private List<string> imageDirectories;
 
-		public EventHandler TextureChanged = delegate(object <p0>, EventArgs <p1>)
+		public EventHandler TextureChanged;/*= delegate(object <p0>, EventArgs <p1>)
 		{
 		};
-
+		*/
+		/*
 		[CompilerGenerated]
 		[Serializable]
 		private sealed class <>c
@@ -116,5 +117,6 @@ namespace COM3D2.NPRShader.Plugin
 
 			public static EventHandler <>9__0_0;
 		}
+		*/
 	}
 }

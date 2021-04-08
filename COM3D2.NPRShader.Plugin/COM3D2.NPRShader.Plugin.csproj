@@ -32,10 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\_lib\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\_lib\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\_lib\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="ExIni">
       <HintPath>F:\COM3D2\BepInEx\plugins\UnityInjectorLoader\ExIni.dll</HintPath>
@@ -47,10 +50,7 @@
       <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\System.Core.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>F:\COM3D2\COM3D2x64_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityInjector">
-      <HintPath>..\..\..\COM3D2_Plugin\cm3d2_j_154\Sybaris\UnityInjector.dll</HintPath>
+      <HintPath>..\..\_lib\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

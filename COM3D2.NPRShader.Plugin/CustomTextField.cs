@@ -80,7 +80,7 @@ namespace COM3D2.NPRShader.Plugin
 
 		private string _value = "";
 
-		public EventHandler ValueChanged = delegate(object <p0>, EventArgs <p1>)
+		public EventHandler ValueChanged;/* = delegate(object <p0>, EventArgs <p1>)
 		{
 		};
 
@@ -111,5 +111,6 @@ namespace COM3D2.NPRShader.Plugin
 
 			public static EventHandler <>9__1_0;
 		}
+			*/
 	}
 }
